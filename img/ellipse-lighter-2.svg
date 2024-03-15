@@ -1,0 +1,22 @@
+<svg width="1243" height="1240" viewBox="0 0 1243 1240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<g style="mix-blend-mode:screen" opacity="0.6" filter="url(#filter0_f_870_7852)">
+<ellipse cx="349.096" cy="267.094" rx="349.096" ry="267.094" transform="matrix(0.745922 -0.666033 0.641521 0.767105 128.656 585.628)" fill="#40B6B7"/>
+</g>
+<g style="mix-blend-mode:screen" filter="url(#filter1_f_870_7852)">
+<ellipse cx="267.094" cy="349.096" rx="267.094" ry="349.096" transform="matrix(0.641521 0.767105 -0.745922 0.666033 772.271 244.215)" fill="#33229A"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_870_7852" x="0.804001" y="0.25322" width="1119.19" height="1115.51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="123.923" result="effect1_foregroundBlur_870_7852"/>
+</filter>
+<filter id="filter1_f_870_7852" x="123.62" y="123.86" width="1119.19" height="1115.51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="123.923" result="effect1_foregroundBlur_870_7852"/>
+</filter>
+</defs>
+</svg>

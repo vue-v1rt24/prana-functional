@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('Neue-Machina/NeueMachina-Light.woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('Neue-Machina/NeueMachina-Regular.woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('Neue-Machina/NeueMachina-Medium.woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('Neue-Machina/NeueMachina-Bold.woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/*  */
+@font-face {
+  font-family: 'RFDewi';
+  src: url('RF-Dewi/RF-Dewi-Expanded-Semibold.otf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RFDewi';
+  src: url('RF-Dewi/RF-Dewi-Expanded-Bold.otf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/*  */
+@font-face {
+  font-family: 'RoadRadio';
+  src: url('RoadRadio/RoadRadio-Bold.woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/*
+100 - Thin (Hairline)
+200 - Extra Light (Ultra Light)
+300 - Light
+400 - Regular (Normal)
+500 - Medium
+600 - Semi Bold (Demi Bold)
+700 - Bold
+800 - Extra Bold (Ultra Bold)
+900 - Black (Heavy)
+*/

@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/InertiaPlugin.min.js" defer></script>
+    <script src="libs/gsap/Draggable.min.js" defer></script>
+    <script src="libs/fancybox/fancybox.js" defer></script>
+    <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="libs/validate.production.min.js" defer></script>
+    <script src="libs/imask.js" defer></script>
+    <script src="libs/mixitup.min.js" defer></script>
+
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
+
+    <script src="js/app.js" defer></script>
+    <title>Prana</title>
+  </head>
+  <body class="page_portfolio">
+    <!-- Курсор -->
+    <div id="cursor"></div>
+    <div id="aura"></div>
+
+    <!-- Фон для мобильного меню -->
+    <div class="backDropMenu"></div>
+
+    <!-- Шапка / Меню -->
+    <header class="header_bx">
+      <div class="container">
+        <div class="header">
+          <div class="logo">
+            <img src="img/logo.svg" alt="" />
+          </div>
+
+          <div class="header__nav">
+            <nav>
+              <ul class="menu">
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="team.html">Команда</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!--  -->
+          <a class="header__tel" href="tel:8 800 500 81 54">8 800 500 81 54</a>
+
+          <!--  -->
+          <div class="header__menu_dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Появляющиеся меню -->
+    <div class="header__menu">
+      <div class="header__menu_top">
+        <div class="header__menu_top_img"><img src="img/logo-menu.svg" alt="" /></div>
+        <div class="header__menu_top_close"><img src="img/close-blue.svg" alt="" /></div>
+      </div>
+
+      <!--  -->
+      <div class="header__menu_center">
+        <ul class="header__menu_ul">
+          <li class="menu-item">
+            <a class="menu-item_not-click" href="#">Портфолио</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#">Веб-разработка</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Дизайн</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Фото и видео</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">3D дизайн</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Motion дизайн</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Продвижение</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="menu-item_not-click" href="#">Услуги</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#">Веб-разработка</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Дизайн</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Фото и видео</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Motion дизайн</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Продвижение</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="menu-item_not-click" href="#">Компания</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#">Команда</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Блог</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Вакансии</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Наша продукция</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!--  -->
+        <div class="header__menu_contacts">
+          <ul class="header__menu_phones">
+            <li class="header__menu_phones_li">
+              <a href="tel:8 800 500 81 54">8 800 500 81 54</a>
+              <span>Горячая линия</span>
+            </li>
+            <li class="header__menu_phones_li">
+              <a href="tel:7 939 113 66 90">7 939 113 66 90</a>
+              <span>Менеджмент</span>
+            </li>
+            <li class="header__menu_phones_li">
+              <a href="mailto:info@pranait.ru">info@pranait.ru</a>
+              <span>Электронный адрес</span>
+            </li>
+          </ul>
+
+          <div class="header__menu_links">
+            <div>
+              <a class="job__link wrap_arrow" href="#">
+                <span class="job__link__border">Презентация компании</span>
+
+                <span class="btn__arrow">
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+
+              <a href="#" class="job__link wrap_arrow btn_start_js" href="#">
+                <span class="job__link__border">Начать проект</span>
+
+                <span class="btn__arrow">
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <ul class="header_soc">
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Хлебные крошки -->
+    <div class="container">
+      <nav class="breadcrumbs">
+        <a href="/">Главная</a>
+        <span class="breadcrumbs_delimiter"></span>
+        Портфолио
+      </nav>
+    </div>
+
+    <!-- Портфолио -->
+    <section class="works_bx stop_pointer">
+      <div class="container">
+        <h2 class="title_52">Портфолио</h2>
+
+        <!-- Кнопки -->
+        <div class="works_tabs">
+          <button type="button" class="works_tabs__btn control active" data-filter="all">
+            <span class="works_tabs__btn_title">Все</span>
+            <span class="works_tabs__btn_count">126</span>
+          </button>
+
+          <button type="button" class="works_tabs__btn control" data-filter=".development">
+            <span class="works_tabs__btn_title">Разработка сайтов</span>
+            <span class="works_tabs__btn_count">25</span>
+          </button>
+
+          <button type="button" class="works_tabs__btn control" data-filter=".branding">
+            <span class="works_tabs__btn_title">Брендинг</span>
+            <span class="works_tabs__btn_count">43</span>
+          </button>
+
+          <button type="button" class="works_tabs__btn control" data-filter=".photo">
+            <span class="works_tabs__btn_title">Фото</span>
+            <span class="works_tabs__btn_count">72</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Работы -->
+      <div class="works">
+        <!--  -->
+        <div class="works__item mix development direct">
+          <div class="works__img skeleton">
+            <img src="img/works/1.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">Приложение</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Приложение</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Разработка приложения</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix development direct">
+          <div class="works__img skeleton">
+            <img src="img/works/2.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">Модульные дома</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Модульные дома</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Разработка сайта</span>
+                </a>
+              </span>
+
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Фото</span>
+                </a>
+              </span>
+
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>3D моделирование</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix development">
+          <div class="works__img skeleton">
+            <img src="img/works/3.jpg" alt="" />
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Как мы путешествовали по горам</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Событие</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix branding direct">
+          <div class="works__img skeleton">
+            <img src="img/works/8.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">dvna.fr</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">dvna.fr</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Разработка сайта</span>
+                </a>
+              </span>
+
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Фото</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix branding direct">
+          <div class="works__img skeleton">
+            <img src="img/works/4.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">СНЭКС</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">СНЭКС</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Разработка сайта</span>
+                </a>
+              </span>
+
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Фирменный стиль</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix photo">
+          <div class="works__img skeleton">
+            <img src="img/works/5.jpg" alt="" />
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Главный инструмент для малого</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Статья</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix photo direct">
+          <div class="works__img skeleton">
+            <img src="img/works/6.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">Премиум парфюм Moiss Dior</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Премиум парфюм Moiss Dior</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Фото</span>
+                </a>
+              </span>
+
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>3D Визуализация</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix photo direct">
+          <div class="works__img skeleton">
+            <img src="img/works/7.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">Fringe</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Fringe</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Фирменный стиль</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix branding direct">
+          <div class="works__img skeleton">
+            <img src="img/works/8.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">dvna.fr</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">dvna.fr</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Разработка сайта</span>
+                </a>
+              </span>
+
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Фото</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix photo direct">
+          <div class="works__img skeleton">
+            <img src="img/works/9.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">Металлопрокат редких металлов</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Металлопрокат редких мета...</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Брендбук</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix photo direct">
+          <div class="works__img skeleton">
+            <img src="img/works/1.jpg" alt="" />
+
+            <!-- По наведению -->
+            <div class="works__item_more_detailed_bx">
+              <a class="works__item_more_detailed__link" href="#">
+                <div class="works__item_more_detailed__title">Приложение</div>
+
+                <p class="works__item_more_detailed__desc">
+                  В данном проекте мы вообще красавчики, по полной забахали дизайна для компании
+                  стройстрой: сделали пи#д@тый сайт, отсняли дома, смоделировали всю эту конитель
+                </p>
+
+                <div class="works__item_more_detailed__preview">
+                  <span>Смотреть проект</span>
+
+                  <div class="works__item_more_detailed__preview_svg">
+                    <svg width="22px" height="18px" class="straight_arrow">
+                      <use xlink:href="img/sprite.svg#straight_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Приложение</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Разработка приложения</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix photo">
+          <div class="works__img skeleton">
+            <img src="img/works/10.jpg" alt="" />
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Отзыв от компании СтройСфера</a>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Видело</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+      </div>
+    </section>
+
+    <!-- Обсудить идею или проект -->
+    <div class="container">
+      <div class="discuss">
+        <form class="discuss_form">
+          <div class="discuss__title">
+            Обсудить идею <br />
+            или проект
+          </div>
+
+          <div class="discuss__fields">
+            <input type="text" name="discuss_name" placeholder="Ваше имя*" />
+            <input type="tel" name="discuss_tel" placeholder="Номер телефона*" />
+            <textarea name="discuss_text" placeholder="Сообщение"></textarea>
+          </div>
+
+          <div class="discuss__file">
+            <div class="discuss__file_title">Загрузите любую информацию о вашем проекте</div>
+
+            <div class="discuss__file_input">
+              <input type="file" name="discuss_file" />
+
+              <button type="button" class="discuss__file_btn">
+                <span class="discuss__file_btn_plus">+</span>
+                <span class="discuss__file_btn_text">Прикрепить файл</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="discuss__submit">
+            <button type="submit" class="blue_btn wrap_arrow">
+              <span class="blue_btn__title">Отправить</span>
+
+              <span class="btn__arrow">
+                <svg class="arrow">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+            </button>
+
+            <div class="discuss__submit_text">
+              Нажимая кнопку "Отправить" <br class="hide576" />
+              вы соглашаетесь <br class="visible576" />
+              с <a href="#">политикой конфиденциальности</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Карта, Контакты, Вакансии -->
+    <section class="blog_bx">
+      <div class="container">
+        <h2 class="blog_bx__title">Контакты</h2>
+
+        <div class="data_company">
+          <div class="data_company__left">
+            <!-- Карта -->
+            <div class="map_wrap">
+              <div id="map" class="map"></div>
+
+              <div class="data_company__address">
+                <div class="data_company__address_title">Мы находимся по адресу</div>
+                <div class="data_company__address_loc">Ставрополь, 50 лет ВЛКСМ 113</div>
+              </div>
+            </div>
+
+            <!-- Вакансии -->
+            <div class="job_bx">
+              <div class="job vacancy">
+                <div class="title_h4 job__title_h4">Вакансии</div>
+
+                <div class="job__lists">
+                  <div class="job__lists_item">
+                    <div class="title_20_500_130">Веб-дизайнер</div>
+
+                    <p class="job__lists__desc">
+                      В своём стремлении улучшить пользовательский опыт мы упускаем, что сделанные
+                      на базе интернет- аналитики
+                    </p>
+                  </div>
+
+                  <div class="job__lists_item">
+                    <div class="title_20_500_130">BackEnd разработчик</div>
+                    <p class="job__lists__desc">
+                      Вот вам яркий пример современных тенденций — укрепление и развитие внутренней
+                      структуры обеспечивает широкому кругу
+                    </p>
+                  </div>
+                </div>
+
+                <a class="job__link wrap_arrow" href="#">
+                  <span>Смотреть все вакансии</span>
+
+                  <span class="btn__arrow">
+                    <svg class="arrow">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="job contacts">
+                <div class="title_h4 job__title_h4">Контакты</div>
+
+                <div class="job__lists">
+                  <div class="job__lists_item">
+                    <div class="job__lists__desc">Email</div>
+                    <a class="title_20_500_130" href="mailto:info@pranait.ru">info@pranait.ru</a>
+                  </div>
+
+                  <div class="job__lists_item">
+                    <div class="job__lists__desc">Номера</div>
+                    <a class="title_20_500_130" href="tel:88005008154">8 800 500 81 54</a>
+                    <a class="title_20_500_130" href="tel:+79383069990">+7 938 306 99 90</a>
+                  </div>
+                </div>
+
+                <ul class="soc">
+                  <li class="soc__item">
+                    <a class="soc__item_link" href="#">
+                      <svg width="22px" height="22px" class="soc_img">
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item">
+                    <a class="soc__item_link" href="#">
+                      <svg width="22px" height="19px" class="soc_img">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item">
+                    <a class="soc__item_link" href="#">
+                      <svg width="22px" height="22px" class="soc_img">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Свяжитесь с нами -->
+          <div class="data_company__form">
+            <div class="contact_us">
+              <div class="contact_us__h3">Свяжитесь с нами</div>
+
+              <p class="description contact_us__description">
+                Оставьте заявку и команда <br class="visible576" />
+                PRANA IT <br class="hide576" />
+                свяжется с вами <br class="visible576" />
+                любым удобным способом
+              </p>
+
+              <form class="contact_form">
+                <div class="contact_us__fields modal__fields">
+                  <input
+                    class="inp_field inp_field__forename"
+                    type="text"
+                    name="forename"
+                    placeholder="Ваше имя"
+                  />
+
+                  <input
+                    class="inp_field inp_field__email"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+
+                  <input
+                    class="inp_field inp_field__tel"
+                    type="tel"
+                    name="tel"
+                    placeholder="Номер телефона"
+                  />
+                </div>
+
+                <div class="contact_us__connection modal__fields">
+                  <div class="description contact_us__description">
+                    Выберите удобный способ связи
+                  </div>
+
+                  <div id="modal_radio_group" class="contact_us__connection_variants">
+                    <label class="label_radio">
+                      <input
+                        class="inp_radio"
+                        checked
+                        type="radio"
+                        name="communication"
+                        value="Звонок"
+                      />
+                      <span class="title_radio">Звонок</span>
+                    </label>
+
+                    <label class="label_radio">
+                      <input class="inp_radio" type="radio" name="communication" value="telegram" />
+                      <span class="title_radio">telegram</span>
+                    </label>
+
+                    <label class="label_radio">
+                      <input
+                        class="inp_radio"
+                        type="radio"
+                        name="communication"
+                        value="whats app"
+                      />
+                      <span class="title_radio">whats app</span>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="blue_btn wrap_arrow contact_us__submit">
+                  <span class="blue_btn__title">Отправить</span>
+
+                  <span class="btn__arrow">
+                    <svg class="arrow">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="contact_us__copy">
+                  Нажимая кнопку “Отправить” вы соглашаетесь <br />
+                  с политикой конфиденциальности
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer_bx">
+      <div class="container">
+        <div class="footer">
+          <div class="footer__logo_bx">
+            <div class="footer__logo"><img src="img/logo.svg" alt="" /></div>
+            <div class="footer__copy">© 2024, LLC PRANA IT</div>
+          </div>
+
+          <ul class="footer__menu">
+            <li class="menu-item">
+              <a href="#">Портфолио</a>
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="#">Веб-разработка</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Дизайн</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">3D дизайн</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Фото</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Видео</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">3D дизайн</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Motion дизайн</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Продвижение</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="#">Услуги</a>
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="#">Веб-разработка</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Дизайн</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Фото и Видео</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Motion дизайн</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Продвижение</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="#">Команда</a>
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="#">Блог</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Отзывы</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Вакансии</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Наша продукция</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="footer__links">
+            <li>
+              <a class="job__link wrap_arrow" href="#">
+                <span class="job__link__border">Презентация компании</span>
+
+                <span class="btn__arrow">
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a class="job__link wrap_arrow btn_start_js" href="#">
+                <span class="job__link__border">Начать проект</span>
+
+                <span class="btn__arrow">
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+
+            <li class="footer__politico">
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Модальное окно "Свяжитесь с нами" -->
+    <div id="modal_form" class="modal_form">
+      <div class="contact_us">
+        <div class="contact_us__h3">Свяжитесь с нами</div>
+
+        <p class="description contact_us__description">
+          Оставьте заявку и команда <br class="visible576" />
+          PRANA IT <br class="hide576" />
+          свяжется с вами <br class="visible576" />
+          любым удобным способом
+        </p>
+
+        <form class="contact_form">
+          <div class="contact_us__fields modal__fields">
+            <input
+              class="inp_field inp_field__forename"
+              type="text"
+              name="forename"
+              placeholder="Ваше имя"
+            />
+
+            <input
+              class="inp_field inp_field__email"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+
+            <input
+              class="inp_field inp_field__tel"
+              type="tel"
+              name="tel"
+              placeholder="Номер телефона"
+            />
+          </div>
+
+          <div class="contact_us__connection modal__fields">
+            <div class="description contact_us__description">Выберите удобный способ связи</div>
+
+            <div id="modal_radio_group" class="contact_us__connection_variants">
+              <label class="label_radio">
+                <input class="inp_radio" checked type="radio" name="communication" value="Звонок" />
+                <span class="title_radio">Звонок</span>
+              </label>
+
+              <label class="label_radio">
+                <input class="inp_radio" type="radio" name="communication" value="telegram" />
+                <span class="title_radio">telegram</span>
+              </label>
+
+              <label class="label_radio">
+                <input class="inp_radio" type="radio" name="communication" value="whats app" />
+                <span class="title_radio">whats app</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="blue_btn wrap_arrow contact_us__submit">
+            <span class="blue_btn__title">Отправить</span>
+
+            <span class="btn__arrow">
+              <svg class="arrow">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </span>
+          </button>
+
+          <div class="contact_us__copy">
+            Нажимая кнопку “Отправить” вы соглашаетесь <br />
+            с политикой конфиденциальности
+          </div>
+        </form>
+      </div>
+
+      <bottom class="close_modal" data-fancybox-close>
+        <img src="img/close.svg" alt="" />
+      </bottom>
+    </div>
+
+    <!-- Модальное окно полной статьи -->
+    <div id="work_full_article" class="work_full_article">
+      <div class="work_full_article__top">
+        <div class="work_full_article__left">
+          <div class="work_full_article__ttile">Фирменный стиль FRINGE</div>
+
+          <p class="work_full_article__desc">
+            Программирование бизнес процессов на основе нейронных сетей
+          </p>
+
+          <!-- Теги -->
+          <div class="works__tags">
+            <span class="works__tag">
+              <a class="works__tag_link" href="#">
+                <span class="works__tag_hash">#</span>
+                <span>Разработка приложения</span>
+              </a>
+            </span>
+
+            <span class="works__tag">
+              <a class="works__tag_link" href="#">
+                <span class="works__tag_hash">#</span>
+                <span>Фото</span>
+              </a>
+            </span>
+
+            <span class="works__tag">
+              <a class="works__tag_link" href="#">
+                <span class="works__tag_hash">#</span>
+                <span>3D моделирование</span>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="work_full_article__right">
+          <div class="work_full_article__year">2023</div>
+          <a class="work_full_article__site" href="#">fringe.com</a>
+        </div>
+      </div>
+
+      <!-- Содержание -->
+      <div class="work_full_article__content">
+        <div class="work_full_article__img"></div>
+
+        <div class="work_full_article__content_mob"></div>
+      </div>
+
+      <!-- Команда проекта -->
+      <div class="work_full_article__roject_team work_roject_team">
+        <div class="work_roject_team___title">Команда проекта</div>
+
+        <div class="work_roject_team__list">
+          <div class="work_roject_team__list_data">
+            <div class="work_roject_team__person">
+              <img src="img/portfolio/photo.jpg" alt="" />
+            </div>
+
+            <div>
+              <span class="work_roject_team__name">Александр Гуминский</span>
+              <span class="work_roject_team__post">Арт-директор</span>
+            </div>
+          </div>
+
+          <div class="work_roject_team__list_data">
+            <div class="work_roject_team__person">
+              <img src="img/portfolio/photo.jpg" alt="" />
+            </div>
+
+            <div>
+              <span class="work_roject_team__name">Владислав Белецкий</span>
+              <span class="work_roject_team__post">Руководитель отдела разработки</span>
+            </div>
+          </div>
+
+          <div class="work_roject_team__list_data">
+            <div class="work_roject_team__person">
+              <img src="img/portfolio/photo.jpg" alt="" />
+            </div>
+
+            <div>
+              <span class="work_roject_team__name">Анастасия Верёвкина</span>
+              <span class="work_roject_team__post">Графический дизайнер</span>
+            </div>
+          </div>
+
+          <div class="work_roject_team__list_data">
+            <div class="work_roject_team__person">
+              <img src="img/portfolio/photo.jpg" alt="" />
+            </div>
+
+            <div>
+              <span class="work_roject_team__name">Роман Василенко</span>
+              <span class="work_roject_team__post">Разработчик</span>
+            </div>
+          </div>
+
+          <div class="work_roject_team__list_data">
+            <div class="work_roject_team__person">
+              <img src="img/portfolio/photo.jpg" alt="" />
+            </div>
+
+            <div>
+              <span class="work_roject_team__name">Александра Костровская</span>
+              <span class="work_roject_team__post">Менеджер</span>
+            </div>
+          </div>
+
+          <div class="work_roject_team__list_data">
+            <div class="work_roject_team__person">
+              <img src="img/portfolio/photo.jpg" alt="" />
+            </div>
+
+            <div>
+              <span class="work_roject_team__name">Александр Гуминский</span>
+              <span class="work_roject_team__post">Арт-директор</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="work_full_article__btns">
+        <a href="#" class="blue_btn btn_transparent wrap_arrow">
+          <span class="blue_btn__title">Смотреть отзыв</span>
+
+          <span class="btn__arrow">
+            <svg class="arrow">
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </a>
+
+        <a href="#" class="blue_btn btn_transparent wrap_arrow">
+          <span class="blue_btn__title">Обсудить проект</span>
+
+          <span class="btn__arrow">
+            <svg class="arrow">
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Сердечко и поделиться -->
+      <div class="work_full_article__hart_share">
+        <div class="work_full_article__hart react">
+          <svg>
+            <use xlink:href="img/sprite.svg#hart"></use>
+          </svg>
+
+          <span>1096</span>
+        </div>
+
+        <div class="work_full_article__share react">
+          <svg>
+            <use xlink:href="img/sprite.svg#share"></use>
+          </svg>
+        </div>
+      </div>
+
+      <!--  -->
+      <bottom class="close_modal" data-fancybox-close>
+        <img src="img/close.svg" alt="" />
+      </bottom>
+    </div>
+  </body>
+</html>
