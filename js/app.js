@@ -723,11 +723,12 @@ if (discussForm) {
 }
 
 // =======================
-const worksBx = document.querySelector('.works_bx');
+// const worksBx = document.querySelector('.works_bx');
+const portfolioJs = document.querySelector('.portfolio_js');
 
-if (worksBx) {
-  const skeletonsBx = worksBx.querySelectorAll('.skeleton');
-  const works = worksBx.querySelectorAll('.works');
+if (portfolioJs) {
+  const skeletonsBx = portfolioJs.querySelectorAll('.skeleton');
+  const works = portfolioJs.querySelectorAll('.works');
 
   // Фильтрация работ
   mixitup(works);
@@ -735,19 +736,19 @@ if (worksBx) {
   // Скрытие skeleton
   setTimeout(() => {
     skeletonsBx.forEach((item) => item.classList.remove('skeleton'));
-    worksBx.classList.remove('stop_pointer');
+    portfolioJs.classList.remove('stop_pointer');
   }, 2000);
 
   // Открытие модального окна с полной статьёй на странице "Портфолио"
-  worksBx.addEventListener('click', (evt) => {
+  portfolioJs.addEventListener('click', (evt) => {
     const target = evt.target;
-    console.log(target);
+    // console.log(target);
 
     //
     const worksTabsBtn = target.closest('.works_tabs__btn');
 
     if (worksTabsBtn) {
-      worksBx.querySelector('.works_tabs__btn.active').classList.remove('active');
+      portfolioJs.querySelector('.works_tabs__btn.active').classList.remove('active');
       worksTabsBtn.classList.add('active');
     }
 
