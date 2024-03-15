@@ -32,7 +32,7 @@
 *,
 *::before,
 *::after {
-  /* cursor: none; */
+  cursor: none;
 }
 
 /*  */
