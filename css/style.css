@@ -2161,6 +2161,18 @@ a {
   -webkit-backdrop-filter: blur(23px);
 }
 
+.portfolio_particles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1012px;
+  height: 633px;
+  background-image: url(../img/portfolio/decor_portfolio_1.svg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: -1;
+}
+
 /*  */
 .page_portfolio .works_bx::before {
   bottom: -500px;
