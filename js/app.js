@@ -792,3 +792,14 @@ if (workFullArticle) {
     workFullArticleHart.classList.toggle('active');
   });
 }
+
+// ======================= Страница полной статьи
+const articleFullBx = document.querySelector('.article_full_bx');
+
+if (articleFullBx) {
+  const rticleFullUsefulBtn = articleFullBx.querySelector('.rticle_full_useful__btn');
+
+  rticleFullUsefulBtn.addEventListener('click', () => {
+    rticleFullUsefulBtn.classList.toggle('active');
+  });
+}
