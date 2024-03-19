@@ -722,37 +722,51 @@ if (discussForm) {
     });
 }
 
-// =======================
-// const worksBx = document.querySelector('.works_bx');
-const portfolioJs = document.querySelector('.portfolio_js');
+// ======================= Скелетон
+const skeletonJs = document.querySelector('.skeleton_js');
 
-if (portfolioJs) {
-  const skeletonsBx = portfolioJs.querySelectorAll('.skeleton');
-  const works = portfolioJs.querySelectorAll('.works');
-
-  // Фильтрация работ
-  mixitup(works);
+if (skeletonJs) {
+  const skeletonsBx = skeletonJs.querySelectorAll('.skeleton');
 
   // Скрытие skeleton
   setTimeout(() => {
     skeletonsBx.forEach((item) => item.classList.remove('skeleton'));
-    portfolioJs.classList.remove('stop_pointer');
+    worksTabs.classList.remove('stop_pointer');
+    skeletonJs.classList.remove('stop_pointer');
   }, 2000);
+}
 
-  // Открытие модального окна с полной статьёй на странице "Портфолио"
-  portfolioJs.addEventListener('click', (evt) => {
-    const target = evt.target;
-    // console.log(target);
+// ======================= Работы
+// Клик по кнопкам фильтра
+const worksTabs = document.querySelector('.works_tabs');
 
-    //
+if (worksTabs) {
+  worksTabs.addEventListener('click', ({ target }) => {
     const worksTabsBtn = target.closest('.works_tabs__btn');
 
     if (worksTabsBtn) {
-      portfolioJs.querySelector('.works_tabs__btn.active').classList.remove('active');
+      worksTabs.querySelector('.works_tabs__btn.active').classList.remove('active');
       worksTabsBtn.classList.add('active');
     }
+  });
+}
 
-    //
+// Фильтрация работ
+const filterJs = document.querySelector('.filter_js');
+
+if (filterJs) {
+  // const works = filterJs.querySelector('.works');
+  // mixitup(works);
+  mixitup(filterJs);
+}
+
+// Открытие модального окна с полной статьёй на странице "Портфолио"
+const worksModalJs = document.querySelector('.works_modal_js');
+
+if (worksModalJs) {
+  worksModalJs.addEventListener('click', (evt) => {
+    const target = evt.target;
+
     const worksImg = target.closest('.works__img');
     const worksTitle = target.closest('.works__title');
 

@@ -807,6 +807,16 @@ a {
   margin-bottom: 15px;
 }
 
+.works__desc {
+  height: 66px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: var(--colorGray);
+  margin-bottom: 24px;
+}
+
 .works__tags {
   max-width: 364px;
 }
@@ -2085,7 +2095,8 @@ a {
 
 /*  */
 .page_company .blog_bx,
-.page_portfolio .blog_bx {
+.page_portfolio .blog_bx,
+.page_blog .blog_bx {
   background-color: var(--colorDark4);
 }
 
@@ -2105,14 +2116,18 @@ a {
 .page_company .contact_us,
 .page_company .job,
 .page_portfolio .contact_us,
-.page_portfolio .job {
+.page_portfolio .job,
+.page_blog .contact_us,
+.page_blog .job {
   background-color: var(--colorDark3);
 }
 
 .page_company .inp_field,
 .page_company .label_radio,
 .page_portfolio .inp_field,
-.page_portfolio .label_radio {
+.page_portfolio .label_radio,
+.page_blog .inp_field,
+.page_blog .label_radio {
   background-color: var(--colorDark4);
 }
 
@@ -2122,7 +2137,8 @@ a {
 
 /*  */
 .page_company .footer_bx,
-.page_portfolio .footer_bx {
+.page_portfolio .footer_bx,
+.page_blog .footer_bx {
   background-color: var(--colorDark4);
 }
 
@@ -2175,7 +2191,7 @@ a {
 
 /*  */
 .page_portfolio .works_bx::before {
-  bottom: -500px;
+  bottom: -230px;
 }
 
 .page_portfolio .title_52 {
@@ -2549,4 +2565,40 @@ a {
 .work_full_article .close_modal {
   top: -130px;
   right: -270px;
+}
+
+/* ================= Страница "Блог" */
+.page_blog .header_bx {
+  position: relative;
+  background-color: rgba(6, 14, 27, 0.5);
+  backdrop-filter: blur(23px);
+  -webkit-backdrop-filter: blur(23px);
+}
+
+.page_blog .title_52 {
+  font-size: 62px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 82px;
+}
+
+.page_blog .works_bx::before {
+  bottom: -140px;
+}
+
+.blog_particles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1290px;
+  height: 891px;
+  background-image: url(../img/blog/decor_blog_1.svg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.page_blog .blog_bx::before,
+.page_blog .blog_bx::after {
+  background-color: white;
 }

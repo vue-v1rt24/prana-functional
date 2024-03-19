@@ -16,28 +16,22 @@
 
     <script src="libs/gsap/gsap.min.js" defer></script>
     <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/InertiaPlugin.min.js" defer></script>
     <script src="libs/gsap/Draggable.min.js" defer></script>
-
     <script src="libs/fancybox/fancybox.js" defer></script>
     <script src="libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="libs/validate.production.min.js" defer></script>
     <script src="libs/imask.js" defer></script>
+    <script src="libs/mixitup.min.js" defer></script>
 
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
 
     <script src="js/app.js" defer></script>
     <title>Prana</title>
   </head>
-  <body class="page_company">
+  <body class="page_blog">
     <!-- Курсор -->
-    <div id="cursor">
-      <!-- Кнопка наведения на блок с видео -->
-      <button class="about_video_btn">
-        <svg class="about_video_btn_play">
-          <use xlink:href="img/sprite.svg#play"></use>
-        </svg>
-      </button>
-    </div>
+    <div id="cursor"></div>
     <div id="aura"></div>
 
     <!-- Фон для мобильного меню -->
@@ -226,349 +220,406 @@
       <nav class="breadcrumbs">
         <a href="/">Главная</a>
         <span class="breadcrumbs_delimiter"></span>
-        О компании
+        Блог
       </nav>
     </div>
 
     <!--  -->
-    <div class="about_particles"></div>
+    <div class="blog_particles"></div>
 
-    <!-- О компании -->
-    <section class="about_sec">
+    <!-- Кнопки -->
+    <section class="works_fiter">
       <div class="container">
-        <div class="about_download">
-          <div class="about_download__left">
-            <div class="about_download__left_title">О компании</div>
-            <h1 class="about_download__left_h1">PRANA IT</h1>
+        <h2 class="title_52">Блог</h2>
+
+        <div class="works_tabs stop_pointer">
+          <button type="button" class="works_tabs__btn control active" data-filter="all">
+            <span class="works_tabs__btn_title">Все</span>
+            <span class="works_tabs__btn_count">126</span>
+          </button>
+
+          <button type="button" class="works_tabs__btn control" data-filter=".article_filter">
+            <span class="works_tabs__btn_title">Статьи</span>
+            <span class="works_tabs__btn_count">25</span>
+          </button>
+
+          <button type="button" class="works_tabs__btn control" data-filter=".event_filter">
+            <span class="works_tabs__btn_title">События</span>
+            <span class="works_tabs__btn_count">43</span>
+          </button>
+
+          <button type="button" class="works_tabs__btn control" data-filter=".video_filter">
+            <span class="works_tabs__btn_title">Видео</span>
+            <span class="works_tabs__btn_count">72</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section class="works_bx filter_js skeleton_js stop_pointer">
+      <div class="works">
+        <!--  -->
+        <div class="works__item mix article_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_1.jpg" alt="" />
+            </a>
           </div>
 
-          <div class="about__download__right">
-            <div class="about__download__right_load">
-              <img class="about__download__right_load_img" src="img/team/download.svg" alt="" />
-              <a class="about__download__right_load_link" href="#" download>
-                Скачать презентацию компании
-              </a>
-            </div>
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Как мы путешествовали по горам</a>
 
-            <p class="about__download__right_desc">
-              Команда профессионалов в различных <br />
-              областях, таких как дизайн, веб-разработка, <br />
-              продвижение, motion и фотография
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений
             </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Событие</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
           </div>
         </div>
 
         <!--  -->
-        <div class="about_video">
-          <a
-            class="about_video__link"
-            href="https://www.youtube.com/watch?v=z2X2HaTvkl8"
-            data-fancybox="team"
-          >
-            <picture>
-              <source srcset="img/team/poster_360.jpg" media="(max-width: 360px)" />
-              <source srcset="img/team/poster_768.jpg" media="(max-width: 768px)" />
-              <img class="about_video__img" src="img/team/poster_1920.jpg" alt="" />
-            </picture>
+        <div class="works__item mix article_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_2.jpg" alt="" />
+            </a>
+          </div>
 
-            <div class="about_video__promo">
-              <div class="about_video__promo_billet">
-                <span class="about_video__promo_billet_vide">Смотрите промо ролик</span>
-                <span class="about_video__promo_billet_duration">Длительность 2 минуты</span>
-              </div>
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Главный инструмент для малого</a>
 
-              <button class="about_video__promo_billet_btn">
-                <svg class="about_video__promo_billet_btn_play">
-                  <use xlink:href="img/sprite.svg#play"></use>
-                </svg>
-              </button>
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Статья</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
             </div>
-          </a>
-        </div>
-
-        <!--  -->
-        <div class="about_desc">
-          <div class="about_desc_1">
-            Имея многолетний опыт работы с самыми разными клиентами,
-            <span>мы не смогли помочь абсолютно всем</span>. Берясь за амбициозные и слишком
-            масштабные проекты, мы иногда
-            <span>срывали оговоренные сроки и подводили</span> крупнейшие организации и предприятия
-          </div>
-
-          <div class="about_desc_2">
-            У нас нет особых преимуществ в сравнении с конкурентами, которые обещают Вам
-            гарантированный результат
-          </div>
-
-          <div class="about_desc_3">
-            Однако, мы искренне удивимся, что Вы выберете именно нас и сделаем все возможное,
-            <span>чтобы выполнить работу хотя бы на половину</span>
-          </div>
-
-          <div class="about_desc_4">
-            Наша команда состоит из людей, <span>мало понимающих что и зачем они делают</span>:
-            front- и beckend-разработчиков, копирайтеров, дизайнеров, фотографов и специалистов по
-            продвижению в Интернете.
-          </div>
-
-          <div class="about_desc_4">
-            Вы можете рассчитывать на нашу экспертность в вопросах, абсолютно не связанных с вашей
-            идеей. Мы не просто, вероятнее всего,
-            <span>
-              не выполним свою работу, но и сможем дать ненужные и бесполезные рекомендации
-            </span>
-            для воплощения ваших бизнес-концепций.
           </div>
         </div>
 
         <!--  -->
-        <div class="not_joke">
-          <div class="not_joke__title">
-            Отбросив шутки, вы сможете убедится в нашей экспертности только увидев
-            <span>наши работы</span> <br class="hide768" />
-            и <span>отзывы клиентов</span>
+        <div class="works__item mix event_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_3.jpg" alt="" />
+            </a>
           </div>
 
-          <div class="not_joke__expert_bx">
-            <div class="not_joke__expert">
-              <div class="not_joke__expert_title">
-                <span>Отзывы наших клиентов</span> расскажут все за нас
-              </div>
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">
+              Команда разработчиков PRANA IT посетила крупнейшее мероприятие по it технология
+            </a>
 
-              <p class="not_joke__expert_desc">Честная обратная связь о работе с нами</p>
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений, поэтому часто устраиваем совместные поездки.
+            </p>
 
-              <a href="#" class="blue_btn wrap_arrow">
-                <span class="blue_btn__title">Смотреть отзывы</span>
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Событие</span>
+                </a>
 
-                <span class="btn__arrow">
-                  <svg class="arrow">
-                    <use xlink:href="img/sprite.svg#arrow"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
-
-            <!--  -->
-            <div class="not_joke__expert">
-              <div class="not_joke__expert_title">
-                А <span>портфолио</span> покажет <br />
-                наш уровень
-              </div>
-
-              <p class="not_joke__expert_desc">Более 100 проектов в разных нишах</p>
-
-              <a href="#" class="blue_btn wrap_arrow">
-                <span class="blue_btn__title">Смотреть портфолио</span>
-
-                <span class="btn__arrow">
-                  <svg class="arrow">
-                    <use xlink:href="img/sprite.svg#arrow"></use>
-                  </svg>
-                </span>
-              </a>
+                <span class="works__date">15.9.2023</span>
+              </span>
             </div>
           </div>
         </div>
+
+        <!--  -->
+        <div class="works__item mix article_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_4.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Отзыв от компании СтройСфера</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Видео</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix event_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_2.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Главный инструмент для малого</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Статья</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix video_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_4.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Отзыв от компании СтройСфера</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Статья</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix event_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_3.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">
+              Команда разработчиков PRANA IT посетила крупнейшее мероприятие по it технология
+            </a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений, поэтому часто устраиваем совместные поездки.
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Событие</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix video_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_1.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Как мы путешествовали по горам</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Видео</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix video_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_1.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Как мы путешествовали по горам</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Событие</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix video_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_2.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Главный инструмент для малого</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Статья</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix video_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_3.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">
+              Команда разработчиков PRANA IT посетила крупнейшее мероприятие по it технология
+            </a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты для новых
+              впечатлений, поэтому часто устраиваем совместные поездки.
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Событие</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="works__item mix video_filter">
+          <div class="works__img skeleton">
+            <a href="#">
+              <img src="img/blog/blog_4.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="works__text">
+            <a href="#" class="works__title skeleton">Отзыв от компании СтройСфера</a>
+
+            <p class="works__desc skeleton">
+              Мы, как коллектив, очень ценим нашу сплоченность и всегда открыты
+            </p>
+
+            <div class="works__tags skeleton">
+              <span class="works__tag">
+                <a class="works__tag_link" href="#">
+                  <span class="works__tag_hash">#</span>
+                  <span>Видео</span>
+                </a>
+
+                <span class="works__date">15.9.2023</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
       </div>
     </section>
 
-    <!-- Люди - наша гордость -->
-    <section class="people_sec">
-      <div class="container">
-        <h2 class="title_52">Люди - наша гордость</h2>
-
-        <div class="swiper swiper_people">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Александр Стопчев</div>
-                <div class="people_item__post">Генеральный директор</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Александр Гуминский</div>
-                <div class="people_item__post">Арт-директор</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Владислав Белецкий</div>
-                <div class="people_item__post">Руководитель отдела разработки</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Анастасия Верёвкина</div>
-                <div class="people_item__post">Графический дизайнер</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Роман Иванов</div>
-                <div class="people_item__post">Разработчик</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Александра Иванова</div>
-                <div class="people_item__post">Менеджмент</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Анатолий Дейкун</div>
-                <div class="people_item__post">Разработчик</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Семён Иванов</div>
-                <div class="people_item__post">Веб-дизайнер</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Никита Найденов</div>
-                <div class="people_item__post">Веб-дизайнер</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Серафима Гордей</div>
-                <div class="people_item__post">Фотограф</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Владислав Воробьёв</div>
-                <div class="people_item__post">Видео-оператор</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="people_item">
-                <div class="people_item__img"></div>
-                <div class="people_item__name">Ещё кто нибудь...</div>
-                <div class="people_item__post">Кто то - олог</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-scrollbar"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Блог -->
+    <!-- Карта, Контакты, Вакансии -->
     <section class="blog_bx">
       <div class="container">
-        <!-- Блог -->
-        <div class="blog">
-          <h2 class="title_52">
-            Как проходят наши <br />
-            мероприятия
-          </h2>
+        <h2 class="blog_bx__title">Контакты</h2>
 
-          <p class="description blog__description">
-            Делимся новостями из мира IT, инсайдами нашей <br class="hide576" />
-            студии и возрождаем жанр текстовых интервью
-          </p>
-
-          <div class="articles">
-            <div class="swiper swiper_articles">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <article class="article">
-                    <img class="article__img" src="img/articles/article-1.jpg" alt="" />
-
-                    <div class="article__content">
-                      <div class="article__btns">
-                        <button class="btn_gray">Событие</button>
-                      </div>
-
-                      <p class="article__desc">
-                        Команда разработчиков <br />
-                        PRANA IT посетила <br class="visible576" />
-                        крупнейшее <br class="hide576" />
-                        мероприятие <br class="visible576" />
-                        по it технологиям
-                      </p>
-                    </div>
-
-                    <a href="#" class="article__read">
-                      <span>Читать</span>
-
-                      <span class="btn__arrow">
-                        <svg class="arrow">
-                          <use xlink:href="img/sprite.svg#arrow"></use>
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
-                </div>
-
-                <div class="swiper-slide">
-                  <article class="article">
-                    <img class="article__img" src="img/articles/article-3.jpg" alt="" />
-
-                    <div class="article__content">
-                      <div class="article__btns">
-                        <button class="btn_gray">Событие</button>
-                      </div>
-
-                      <p class="article__desc">
-                        Выходные в горах: как <br />
-                        наша команда побывала <br />
-                        в плато Бермамыт
-                      </p>
-                    </div>
-
-                    <a href="#" class="article__read">
-                      <span>Читать</span>
-
-                      <span class="btn__arrow">
-                        <svg class="arrow">
-                          <use xlink:href="img/sprite.svg#arrow"></use>
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
-                </div>
-              </div>
-
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Карта, Контакты, Вакансии -->
         <div class="data_company">
-          <div class="data_company__ellipse">
-            <img src="img/ellipse-grow.svg" alt="" />
-          </div>
-
           <div class="data_company__left">
             <!-- Карта -->
             <div class="map_wrap">
@@ -627,7 +678,7 @@
                   <div class="job__lists_item">
                     <div class="job__lists__desc">Номера</div>
                     <a class="title_20_500_130" href="tel:88005008154">8 800 500 81 54</a>
-                    <a class="title_20_500_130" href="tel:+7 938 306 99 90">+7 938 306 99 90</a>
+                    <a class="title_20_500_130" href="tel:+79383069990">+7 938 306 99 90</a>
                   </div>
                 </div>
 
@@ -865,7 +916,7 @@
       </div>
     </footer>
 
-    <!-- Модальное окно -->
+    <!-- Модальное окно "Свяжитесь с нами" -->
     <div id="modal_form" class="modal_form">
       <div class="contact_us">
         <div class="contact_us__h3">Свяжитесь с нами</div>

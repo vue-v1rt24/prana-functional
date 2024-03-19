@@ -50,7 +50,7 @@
               <ul class="menu">
                 <li><a href="portfolio.html">Портфолио</a></li>
                 <li><a href="team.html">Команда</a></li>
-                <li><a href="#">Блог</a></li>
+                <li><a href="blog.html">Блог</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
             </nav>
@@ -227,39 +227,40 @@
     <!--  -->
     <div class="portfolio_particles"></div>
 
-    <!-- Портфолио -->
-    <section class="works_bx portfolio_js stop_pointer">
+    <!-- Кнопки -->
+    <section class="works_fiter">
       <div class="container">
         <h2 class="title_52">Портфолио</h2>
 
-        <!-- Кнопки -->
-        <div class="works_tabs">
+        <div class="works_tabs stop_pointer">
           <button type="button" class="works_tabs__btn control active" data-filter="all">
             <span class="works_tabs__btn_title">Все</span>
             <span class="works_tabs__btn_count">126</span>
           </button>
 
-          <button type="button" class="works_tabs__btn control" data-filter=".development">
+          <button type="button" class="works_tabs__btn control" data-filter=".development_filter">
             <span class="works_tabs__btn_title">Разработка сайтов</span>
             <span class="works_tabs__btn_count">25</span>
           </button>
 
-          <button type="button" class="works_tabs__btn control" data-filter=".branding">
+          <button type="button" class="works_tabs__btn control" data-filter=".branding_filter">
             <span class="works_tabs__btn_title">Брендинг</span>
             <span class="works_tabs__btn_count">43</span>
           </button>
 
-          <button type="button" class="works_tabs__btn control" data-filter=".photo">
+          <button type="button" class="works_tabs__btn control" data-filter=".photo_filter">
             <span class="works_tabs__btn_title">Фото</span>
             <span class="works_tabs__btn_count">72</span>
           </button>
         </div>
       </div>
+    </section>
 
-      <!-- Работы -->
+    <!-- Портфолио -->
+    <section class="works_bx works_modal_js filter_js skeleton_js stop_pointer">
       <div class="works">
         <!--  -->
-        <div class="works__item mix development direct">
+        <div class="works__item mix development_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/1.jpg" alt="" />
 
@@ -301,7 +302,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix development direct">
+        <div class="works__item mix development_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/2.jpg" alt="" />
 
@@ -357,7 +358,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix development">
+        <div class="works__item mix development_filter">
           <div class="works__img skeleton">
             <img src="img/works/3.jpg" alt="" />
           </div>
@@ -379,7 +380,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix branding direct">
+        <div class="works__item mix branding_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/8.jpg" alt="" />
 
@@ -428,7 +429,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix branding direct">
+        <div class="works__item mix branding_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/4.jpg" alt="" />
 
@@ -477,7 +478,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix photo">
+        <div class="works__item mix photo_filter">
           <div class="works__img skeleton">
             <img src="img/works/5.jpg" alt="" />
           </div>
@@ -499,7 +500,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix photo direct">
+        <div class="works__item mix photo_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/6.jpg" alt="" />
 
@@ -548,7 +549,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix photo direct">
+        <div class="works__item mix photo_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/7.jpg" alt="" />
 
@@ -590,7 +591,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix branding direct">
+        <div class="works__item mix branding_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/8.jpg" alt="" />
 
@@ -639,7 +640,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix photo direct">
+        <div class="works__item mix photo_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/9.jpg" alt="" />
 
@@ -681,7 +682,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix photo direct">
+        <div class="works__item mix photo_filter direct">
           <div class="works__img skeleton">
             <img src="img/works/1.jpg" alt="" />
 
@@ -723,7 +724,7 @@
         </div>
 
         <!--  -->
-        <div class="works__item mix photo">
+        <div class="works__item mix photo_filter">
           <div class="works__img skeleton">
             <img src="img/works/10.jpg" alt="" />
           </div>
