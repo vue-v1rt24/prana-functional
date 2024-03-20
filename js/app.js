@@ -802,4 +802,42 @@ if (articleFullBx) {
   rticleFullUsefulBtn.addEventListener('click', () => {
     rticleFullUsefulBtn.classList.toggle('active');
   });
+
+  // Форма "Еженедельный дайджест"
+  const validator = new JustValidate('#digest__form', {
+    lockForm: true,
+  });
+
+  validator
+    .addField('[name="digest_email"]', [{ rule: 'required' }, { rule: 'email' }])
+    .onSuccess(async (event) => {
+      const data = new FormData(event.target);
+      console.log('Отправлено');
+    });
+
+  // Слайдер
+  const swiperArticleFull = articleFullBx.querySelector('.swiper_article_full');
+
+  if (swiperArticleFull) {
+    new Swiper('.swiper_article_full', {
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        hide: false,
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 30,
+        },
+        577: {
+          spaceBetween: 30,
+        },
+        769: {
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 }
