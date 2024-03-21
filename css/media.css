@@ -394,7 +394,7 @@
   }
 
   /*  */
-  .page_blog .works_bx::before {
+  .page_blog.works_bx::before {
     bottom: -100px;
   }
 }
@@ -1032,7 +1032,7 @@
   }
 
   /*  */
-  .page_blog .works_tabs {
+  .page_blog.works_tabs {
     width: auto;
   }
 
