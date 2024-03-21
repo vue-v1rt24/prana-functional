@@ -2892,7 +2892,7 @@ a {
 /*  */
 .article_full__task {
   position: absolute;
-  top: 344px;
+  top: 396px;
   right: -438px;
   width: 400px;
   background-color: var(--colorBirch);
@@ -2911,7 +2911,7 @@ a {
   font-size: 20px;
   line-height: 130%;
   letter-spacing: 0.02em;
-  margin-bottom: auto;
+  margin-bottom: 32px;
 }
 
 .article_full__task .blue_btn {
