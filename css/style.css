@@ -243,6 +243,11 @@ a {
 
 /*  */
 /* Хлебные крошки */
+.breadcrumbs_bx {
+  background-color: transparent;
+  padding: 52px 0 100px 0;
+}
+
 .breadcrumbs {
   font-size: 14px;
   font-weight: 300;
@@ -252,7 +257,6 @@ a {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin: 52px 0 100px 0;
 }
 
 .breadcrumbs a {
@@ -266,6 +270,20 @@ a {
   background-repeat: no-repeat;
   transform: translateY(1px);
   opacity: 0.6;
+}
+
+/* Хлебные крошки на белом фоне */
+.breadcrumbs__dark {
+  background-color: white;
+  padding: 82px 0 100px 0;
+}
+
+.breadcrumbs__dark .breadcrumbs {
+  color: var(--colorDark3);
+}
+
+.breadcrumbs__dark .breadcrumbs_delimiter {
+  background-image: url(../img/arrow-dark.svg);
 }
 /* /Хлебные крошки */
 
@@ -3069,4 +3087,44 @@ a {
 
 .video_fancybox_modal .fancybox__iframe {
   border-radius: 18px;
+}
+
+/* ================= Страница отзывов */
+.reviews_bx {
+  background-color: white;
+}
+
+.reviews_bx .title_52 {
+  font-size: 62px;
+  color: var(--colorDark3);
+  margin-bottom: 82px;
+}
+
+/*  */
+.reviews__data_img {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.reviews__data_img img {
+  width: 70px;
+  height: 70px;
+}
+
+.reviews__data_text_title {
+  font-family: var(--fontFamily-RFDewi);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: var(--colorDark3);
+  margin-bottom: 18px;
+}
+
+.reviews__data_text_desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--colorGray);
 }
