@@ -2992,6 +2992,7 @@ a {
   width: 92px;
   height: 92px;
   background-image: url(../img/video/videoBtn.svg);
+  background-size: cover;
 }
 
 .video_img {
@@ -3025,7 +3026,18 @@ a {
   width: 290px;
 }
 
-.separate_project img {
+.separate_project__img {
+  position: relative;
+  width: 290px;
+  height: 290px;
+}
+
+.separate_project__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 18px;
 }
 
@@ -3039,4 +3051,22 @@ a {
 .separate_project .blue_btn .btn__arrow .arrow {
   width: 13px;
   height: 13px;
+}
+
+/*  */
+.video_fancybox_modal {
+  margin: 0 20px;
+}
+
+.video_fancybox_modal .fancybox__content {
+  background: transparent;
+}
+
+.video_fancybox_modal .fancybox__backdrop {
+  backdrop-filter: blur(16px);
+  background: rgba(6, 14, 27, 0.8);
+}
+
+.video_fancybox_modal .fancybox__iframe {
+  border-radius: 18px;
 }

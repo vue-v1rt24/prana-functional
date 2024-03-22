@@ -159,6 +159,11 @@
     padding: 0 39px;
     margin: 0 0 0 0;
   }
+
+  /*  */
+  .page_video.article_full {
+    max-width: 840px;
+  }
 }
 
 @media (max-width: 1299px) {
@@ -216,6 +221,27 @@
     width: 552px;
     height: 508px;
     background-image: url(../img/blog/decor_blog_2.svg);
+  }
+
+  /*  */
+  .video_fancybox_modal .video_hart {
+    display: flex;
+    column-gap: 32px;
+    margin: 32% 0 0 -80px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .page_video.article_full {
+    max-width: 100%;
+  }
+
+  .rticle_full_useful {
+    margin: 48px 0 48px 0;
+  }
+
+  .separate_project {
+    display: none;
   }
 }
 
@@ -579,6 +605,39 @@
 
   .article_full__task .blue_btn {
     transform: translateY(0);
+  }
+
+  /*  */
+  .video_fancybox::before {
+    width: 75px;
+    height: 75px;
+  }
+
+  .separate_project {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 31px;
+    margin-bottom: 52px;
+  }
+
+  .separate_project__img {
+    flex: 1.05;
+    width: 330px;
+    height: 330px;
+  }
+
+  .separate_project .blue_btn {
+    flex: 1;
+    width: 330px;
+    height: 330px;
+    margin-top: 0;
+  }
+
+  .page_video .article_full__digest {
+    width: 100%;
   }
 }
 
@@ -1193,6 +1252,21 @@
   /*  */
   .works__desc {
     height: auto;
+  }
+
+  /*  */
+  .separate_project {
+    flex-direction: column;
+  }
+
+  .separate_project__img {
+    flex: none;
+  }
+
+  .separate_project .blue_btn {
+    flex: none;
+    height: 82px;
+    margin-top: 20px;
   }
 }
 
@@ -2251,6 +2325,27 @@
   .swiper_article_full .swiper-scrollbar {
     margin-top: 36px;
   }
+
+  /*  */
+  .desc_video {
+    margin: 24px 0 32px 0;
+  }
+
+  .video_fancybox::before {
+    width: 35px;
+    height: 35px;
+  }
+
+  /*  */
+  .page_video.rticle_full_useful {
+    margin: 32px 0 82px 0;
+  }
+
+  .video_hart .work_full_article__hart,
+  .video_hart .work_full_article__share {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -2264,6 +2359,16 @@
 
   /*  */
   .rticle_full_useful__btn {
+    width: 100%;
+  }
+
+  /*  */
+  .page_video .rticle_full_useful__btn {
+    width: 100%;
+  }
+
+  .separate_project__img,
+  .separate_project .blue_btn {
     width: 100%;
   }
 }

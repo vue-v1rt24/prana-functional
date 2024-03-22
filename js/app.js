@@ -562,12 +562,13 @@ if (dataCompany && matchMedia('(max-width: 1365px)').matches) {
 Fancybox.defaults.trapFocus = false;
 Fancybox.defaults.l10n.CLOSE = 'Закрыть';
 
-// ================= Для видео на странице Видео(video.html)
+// ================= Для видео в модальном окне на странице video.html
 const videoFancyboxBx = document.querySelector('.video_fancybox_bx');
-const videoFancybox = videoFancyboxBx.querySelector('.video_fancybox');
-const workFullArticleHartHtml = videoFancyboxBx.querySelector('.work_full_article__hart');
 
-if (videoFancybox) {
+if (videoFancyboxBx) {
+  const videoFancybox = videoFancyboxBx.querySelector('.video_fancybox');
+  const workFullArticleHartHtml = videoFancyboxBx.querySelector('.work_full_article__hart');
+
   Fancybox.bind('.video_fancybox', {
     mainClass: 'video_fancybox_modal',
     closeButton: false,
@@ -593,6 +594,41 @@ if (videoFancybox) {
     },
   });
 }
+
+/* if (videoFancyboxBx) {
+  videoFancyboxBx.addEventListener('click', ({ target }) => {
+    const videoFancyboxJs = target.closest('.video_fancybox_js');
+
+    if (videoFancyboxJs) {
+      console.log(videoFancyboxJs);
+    }
+  });
+
+  Fancybox.bind('.video_fancybox_js', {
+    mainClass: 'video_fancybox_modal',
+    closeButton: false,
+    on: {
+      done() {
+        const videoFancyboxModal = document.querySelector('.video_fancybox_modal');
+        const fancyboxContent = videoFancyboxModal.querySelector('.fancybox__content');
+
+        const videoHart = videoFancyboxBx.querySelector('.video_hart');
+
+        const cloneVideoHart = videoHart.cloneNode(true);
+
+        const workFullArticleHart = cloneVideoHart.querySelector('.work_full_article__hart');
+
+        fancyboxContent.append(cloneVideoHart);
+
+        workFullArticleHart.addEventListener('click', () => {
+          workFullArticleHart.classList.toggle('active');
+          workFullArticleHartHtml.classList.toggle('active');
+          console.log('Отправка запроса');
+        });
+      },
+    },
+  });
+} */
 
 // ================= Слайдер услуг на главной
 const swiperServicesBx = document.querySelector('.swiper_services');
