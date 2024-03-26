@@ -1215,6 +1215,10 @@
     display: none;
   }
 
+  .contacts {
+    width: 100%;
+  }
+
   /*  */
   .swiper_people {
     padding: 0 39px 30px 39px;

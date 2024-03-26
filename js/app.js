@@ -656,6 +656,15 @@ if (discussForm) {
     discussFileInput.click();
   });
 
+  // Загрузка файла
+  discussFileInput.addEventListener('change', ({ target }) => {
+    const file = target.files[0];
+
+    if (file) {
+      discussFileBtn.classList.add('load');
+    }
+  });
+
   // Валидация и отправка
   const validator = new JustValidate(discussForm, {
     lockForm: true,
@@ -665,6 +674,7 @@ if (discussForm) {
     .addField('[name="discuss_name"]', [{ rule: 'required' }])
     .addField('[name="discuss_tel"]', [{ rule: 'required' }])
     .onSuccess(async (event) => {
+      console.log(event.target);
       const data = new FormData(event.target);
       console.log('Отправлено');
     });

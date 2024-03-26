@@ -1478,7 +1478,7 @@ a {
   position: relative;
   display: flex;
   gap: 40px;
-  margin-top: 160px;
+  margin-top: 62px;
 }
 
 /*  */
@@ -2340,6 +2340,27 @@ a {
   padding: 12px 26px;
 }
 
+.discuss__file_load,
+.discuss__file_success {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.discuss__file_btn.load .discuss__file_load {
+  display: none;
+}
+
+.discuss__file_success {
+  display: none;
+}
+
+.discuss__file_btn.load .discuss__file_success {
+  display: flex;
+}
+
 .discuss__file_btn_plus {
   font-size: 28px;
 }
@@ -3080,7 +3101,7 @@ a {
   right: auto;
   color: white;
   font-size: 30px;
-  margin: -269px 0 0 536px;
+  margin: -269px 0 0 500px;
 }
 
 /*  */

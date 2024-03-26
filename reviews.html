@@ -42,7 +42,9 @@
       <div class="container">
         <div class="header">
           <div class="logo">
-            <img src="img/logo.svg" alt="" />
+            <a href="/">
+              <img src="img/logo.svg" alt="" />
+            </a>
           </div>
 
           <div class="header__nav">
@@ -645,8 +647,15 @@
                 <input type="file" name="discuss_file" />
 
                 <button type="button" class="discuss__file_btn">
-                  <span class="discuss__file_btn_plus">+</span>
-                  <span class="discuss__file_btn_text">Прикрепить файл</span>
+                  <div class="discuss__file_load">
+                    <span class="discuss__file_btn_plus">+</span>
+                    <span class="discuss__file_btn_text">Прикрепить файл</span>
+                  </div>
+
+                  <div class="discuss__file_success">
+                    <img src="img/check-blue.svg" alt="" />
+                    <span class="discuss__file_btn_text">Файл загружен</span>
+                  </div>
                 </button>
               </div>
             </div>
