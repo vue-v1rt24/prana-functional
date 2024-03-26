@@ -752,53 +752,55 @@
     </section>
 
     <!-- Обсудить идею или проект -->
-    <div class="container">
-      <div class="discuss">
-        <form class="discuss_form">
-          <div class="discuss__title">
-            Обсудить идею <br />
-            или проект
-          </div>
+    <section class="discuss_bx">
+      <div class="container">
+        <div class="discuss">
+          <form class="discuss_form">
+            <div class="discuss__title">
+              Обсудить идею <br />
+              или проект
+            </div>
 
-          <div class="discuss__fields">
-            <input type="text" name="discuss_name" placeholder="Ваше имя*" />
-            <input type="tel" name="discuss_tel" placeholder="Номер телефона*" />
-            <textarea name="discuss_text" placeholder="Сообщение"></textarea>
-          </div>
+            <div class="discuss__fields">
+              <input type="text" name="discuss_name" placeholder="Ваше имя*" />
+              <input type="tel" name="discuss_tel" placeholder="Номер телефона*" />
+              <textarea name="discuss_text" placeholder="Сообщение"></textarea>
+            </div>
 
-          <div class="discuss__file">
-            <div class="discuss__file_title">Загрузите любую информацию о вашем проекте</div>
+            <div class="discuss__file">
+              <div class="discuss__file_title">Загрузите любую информацию о вашем проекте</div>
 
-            <div class="discuss__file_input">
-              <input type="file" name="discuss_file" />
+              <div class="discuss__file_input">
+                <input type="file" name="discuss_file" />
 
-              <button type="button" class="discuss__file_btn">
-                <span class="discuss__file_btn_plus">+</span>
-                <span class="discuss__file_btn_text">Прикрепить файл</span>
+                <button type="button" class="discuss__file_btn">
+                  <span class="discuss__file_btn_plus">+</span>
+                  <span class="discuss__file_btn_text">Прикрепить файл</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="discuss__submit">
+              <button type="submit" class="blue_btn wrap_arrow">
+                <span class="blue_btn__title">Отправить</span>
+
+                <span class="btn__arrow">
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </span>
               </button>
+
+              <div class="discuss__submit_text">
+                Нажимая кнопку "Отправить" <br class="hide576" />
+                вы соглашаетесь <br class="visible576" />
+                с <a href="#">политикой конфиденциальности</a>
+              </div>
             </div>
-          </div>
-
-          <div class="discuss__submit">
-            <button type="submit" class="blue_btn wrap_arrow">
-              <span class="blue_btn__title">Отправить</span>
-
-              <span class="btn__arrow">
-                <svg class="arrow">
-                  <use xlink:href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </button>
-
-            <div class="discuss__submit_text">
-              Нажимая кнопку "Отправить" <br class="hide576" />
-              вы соглашаетесь <br class="visible576" />
-              с <a href="#">политикой конфиденциальности</a>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- Карта, Контакты, Вакансии -->
     <section class="blog_bx blog_blue">

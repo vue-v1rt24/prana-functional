@@ -280,6 +280,7 @@ a {
 
 .breadcrumbs__dark .breadcrumbs {
   color: var(--colorDark3);
+  margin: 0;
 }
 
 .breadcrumbs__dark .breadcrumbs_delimiter {
@@ -1750,7 +1751,18 @@ a {
 /* ================= Страница "О компании" */
 .about_sec {
   position: relative;
-  margin-bottom: 160px;
+}
+
+.about_sec::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 118px;
+  background-color: white;
+  border-radius: 58px 58px 0 0;
+  z-index: -1;
 }
 
 /*  */
@@ -1772,18 +1784,6 @@ a {
   width: 940px;
   height: 714px;
   background-image: url(../img/team/decoration_1_1920.svg);
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.about_particles::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 630px;
-  height: 1514px;
-  background-image: url(../img/team/decoration_2_1920.svg);
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -1859,8 +1859,8 @@ a {
 /*  */
 .about_video {
   position: relative;
+  margin: 0 -39px;
   overflow: hidden;
-  margin-bottom: 160px;
 }
 
 /*  */
@@ -1955,6 +1955,54 @@ a {
 }
 
 /*  */
+.about_desc_bx {
+  position: relative;
+  color: var(--colorDark3);
+  background-color: white;
+  padding: 160px 0 150px 0;
+}
+
+.about_desc_bx::after {
+  content: '';
+  position: absolute;
+  bottom: 460px;
+  right: 0;
+  width: 630px;
+  height: 1514px;
+  background-image: url(../img/team/decoration_2_1920.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.about_desc_bx .container {
+  position: relative;
+  z-index: 2;
+}
+
+/*  */
+.not_joke__link span {
+  border-bottom: 2px solid var(--accentColor);
+}
+
+.not_joke__link svg {
+  width: 46px;
+  height: 46px;
+  transform: translateY(14px);
+  transition: fill 0.3s, transform 0.3s;
+}
+
+.not_joke__link:hover svg {
+  fill: var(--accentColor);
+  transform: translateY(14px) rotate(-45deg);
+  transition: fill 0.3s, transform 0.3s;
+}
+
+.not_joke__link:hover svg > path {
+  fill: white;
+  transition: fill 0.3s;
+}
+
+/*  */
 .about_desc {
   font-family: var(--fontFamily-RFDewi);
   margin-bottom: 160px;
@@ -1969,7 +2017,6 @@ a {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0.84px;
-  color: var(--colorTextWhite);
   margin-bottom: 100px;
 }
 
@@ -1997,7 +2044,6 @@ a {
   font-size: 20px;
   font-weight: 300;
   line-height: 140%;
-  color: var(--colorTextOpacity08);
 }
 
 .about_desc_4:not(:last-child) {
@@ -2006,7 +2052,34 @@ a {
 
 .about_desc_4 span {
   font-weight: 700;
-  color: var(--colorTextOpacity08);
+  color: var(--colorDark3);
+}
+
+/*  */
+.team_page.blog_bx {
+  overflow: hidden;
+}
+
+.team_page.blog_blue::before,
+.team_page.blog_blue::after {
+  background-color: var(--colorDark3);
+}
+
+.team_page .title_52 {
+  margin-bottom: 62px;
+}
+
+/*  */
+.team_page .blog_bx__title {
+  margin-top: 160px;
+}
+
+.team_page .data_company {
+  margin-top: 62px;
+}
+
+.team_page .swiper_article_full .swiper-scrollbar {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*  */
@@ -2026,53 +2099,18 @@ a {
   color: var(--accentColor2);
 }
 
-/*  */
-.not_joke__expert_bx {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(530px, 620px));
-  justify-content: center;
-  gap: 32px 40px;
-}
-
-.not_joke__expert {
-  background-color: var(--colorTextWhite);
-  border-radius: 42px;
-  padding: 52px;
-}
-
-.not_joke__expert_title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: 0.48px;
-  color: var(--colorDark3);
-  margin-bottom: 24px;
-}
-
-.not_joke__expert_title span {
-  color: var(--accentColor2);
-}
-
-.not_joke__expert_desc {
-  font-family: var(--fontFamily-NeueMachina);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 140%;
-  color: var(--colorDark3);
-  margin-bottom: 56px;
-}
-
-.not_joke__expert .blue_btn {
-  width: fit-content;
-  height: 103px;
-  font-size: 24px;
-  padding: 0 62px;
-  margin: 0;
+.not_joke__title img {
+  width: 46px;
 }
 
 /*  */
 .people_sec {
   margin-bottom: 160px;
+}
+
+.people_sec .container {
+  max-width: 1860px;
+  padding: 0;
 }
 
 .people_sec .title_52 {
@@ -2086,16 +2124,16 @@ a {
 .swiper_people .swiper-wrapper {
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px 40px;
+  gap: 40px 20px;
 }
 
 .swiper_people .swiper-slide {
-  width: 290px;
+  width: 450px;
 }
 
 .people_item__img {
   width: 100%;
-  height: 290px;
+  height: 450px;
   background-color: #060e1b;
   border-radius: 26px;
   margin-bottom: 24px;
@@ -2103,7 +2141,7 @@ a {
 
 .people_item__name {
   font-family: var(--fontFamily-RFDewi);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 120%;
   letter-spacing: 0.36px;
@@ -2112,10 +2150,10 @@ a {
 
 .people_item__post {
   font-family: var(--fontFamily-NeueMachina);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 130%;
-  color: var(--colorTextOpacity08);
+  color: var(--accentColor);
 }
 
 /*  */
@@ -2218,8 +2256,12 @@ a {
 }
 
 /*  */
+.discuss_bx {
+  background-color: white;
+  padding-bottom: 160px;
+}
+
 .discuss {
-  max-width: 1280px;
   color: var(--colorDark3);
   background-color: var(--colorBirch);
   background-image: url(../img/portfolio/discuss_particle.png);
@@ -2227,7 +2269,6 @@ a {
   background-position: right center;
   border-radius: 42px;
   padding: 100px;
-  margin: 10px auto 160px auto;
 }
 
 .discuss_form {
@@ -2978,6 +3019,17 @@ a {
   margin-top: 62px;
 }
 
+.swiper__dark .works__title,
+.swiper__dark .works__tag_link,
+.swiper__dark .works__date {
+  color: white;
+}
+
+.swiper__dark .works__desc {
+  color: white;
+  opacity: 0.4;
+}
+
 /* ================= Страница видео */
 .page_video .rticle_full_useful__btn {
   width: 183px;
@@ -3092,6 +3144,7 @@ a {
 /* ================= Страница отзывов */
 .reviews_bx {
   background-color: white;
+  padding-bottom: 160px;
 }
 
 .reviews_bx .title_52 {
@@ -3101,7 +3154,15 @@ a {
 }
 
 /*  */
+.reviews_open_bx {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px 40px;
+}
+
 .reviews__data_img {
+  max-width: 400px;
+  width: 100%;
   display: flex;
   align-items: center;
   column-gap: 24px;
@@ -3127,4 +3188,50 @@ a {
   font-size: 18px;
   line-height: 120%;
   color: var(--colorGray);
+}
+
+/*  */
+.reviews_open .reviews__data {
+  margin-top: 32px;
+}
+
+.reviews_open .reviews__data_img {
+  margin-bottom: 26px;
+}
+
+.reviews_open .works__tags {
+  max-width: 100%;
+}
+
+/*  */
+.reviews_close_bx {
+  margin-top: 160px;
+}
+
+.reviews_close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 42px 0;
+}
+
+.reviews_close:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
+.reviews_close .works__tags {
+  max-width: 400px;
+  width: 100%;
+}
+
+.reviews_arrow {
+  font-family: var(--fontFamily-RFDewi);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  color: var(--colorDark3);
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
 }
