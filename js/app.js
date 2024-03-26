@@ -120,63 +120,6 @@ if (!isMobile) {
   });
 }
 
-/*  */
-
-/* ================= Меню - Гамбургер */
-/* const backDropMenu = document.querySelector('.backDropMenu');
-const headerBx = document.querySelector('.header_bx');
-const headerNav = headerBx.querySelector('.header__nav');
-const hamburger = headerBx.querySelector('.hamburger');
-
-//
-let headerHeight = 0;
-
-mm.add('(max-width: 576px)', () => {
-  headerHeight = headerBx.offsetHeight;
-
-  return () => {
-    headerHeight = 0;
-  };
-});
-
-//
-const visibleMenu = () => {
-  document.body.classList.toggle('open_menu');
-  hamburger.classList.toggle('is-active');
-  headerNav.classList.toggle('active');
-  backDropMenu.classList.toggle('active');
-
-  headerNav.style.height = '';
-
-  // Добавление скролла в мобильное меню (если не помещается)
-  const wh = window.outerHeight;
-  const headerNavHeight = headerNav.scrollHeight;
-  // console.log(wh);
-  // console.log(headerNavHeight);
-
-  if (wh < headerNavHeight + headerHeight) {
-    headerNav.style.height = wh - 120 + 'px';
-  } else {
-    headerNav.style.height = headerNavHeight + 10 + 'px';
-  }
-};
-
-if (hamburger) {
-  hamburger.addEventListener('click', visibleMenu);
-  backDropMenu.addEventListener('click', visibleMenu);
-} */
-
-/* ================= Перемещение кнопки "Начать проект" в моб. версии */
-/* if (matchMedia('(max-width: 600px)').matches) {
-  const headerInfo = document.querySelector('.header__info');
-  const btnStart = document.querySelector('.btn_start_js');
-
-  if (headerInfo && btnStart) {
-    headerInfo.prepend(btnStart);
-    btnStart.style.display = 'flex';
-  }
-} */
-
 /* ========================== Открытие меню */
 const headerMenuDots = document.querySelector('.header__menu_dots');
 
@@ -238,10 +181,6 @@ if (headerMenuDots) {
 /*  */
 //
 if (ScrollTrigger.isTouch === 0 && matchMedia('(min-width: 1299px)').matches) {
-  ScrollTrigger.defaults({
-    // markers: true,
-  });
-
   /* ================= Блок "services_bx" */
   const services = document.querySelector('.services_bx');
 
@@ -297,31 +236,6 @@ if (ScrollTrigger.isTouch === 0 && matchMedia('(min-width: 1299px)').matches) {
       '-=1',
     );
   }
-
-  /* ================= Блок "works_bx" */
-  /* const worksBx = document.querySelector('.works_bx');
-
-  if (worksBx) {
-    const tlWorks = gsap.timeline({
-      scrollTrigger: {
-        id: 'Работы',
-        trigger: '.works_bx',
-        start: 'top top+=150',
-        end: 'top top',
-        scrub: 1,
-      },
-    });
-
-    tlWorks.from('.works__h2', {
-      duration: 0.3,
-      y: 0,
-    });
-
-    tlWorks.from('.works__items', {
-      duration: 3,
-      y: 0,
-    });
-  } */
 }
 
 /* ================= Блок "sphere_bx" */
@@ -564,41 +478,11 @@ Fancybox.defaults.l10n.CLOSE = 'Закрыть';
 // ================= Для видео в модальном окне на странице video.html и reviews.html
 const videoFancyboxBx = document.querySelector('.video_fancybox_bx');
 
-/* if (videoFancyboxBx) {
-  const workFullArticleHartHtml = videoFancyboxBx.querySelector('.work_full_article__hart');
-
-  Fancybox.bind('.video_fancybox', {
-    mainClass: 'video_fancybox_modal',
-    closeButton: false,
-    on: {
-      done() {
-        const videoFancyboxModal = document.querySelector('.video_fancybox_modal');
-        const fancyboxContent = videoFancyboxModal.querySelector('.fancybox__content');
-
-        const videoHart = videoFancyboxBx.querySelector('.video_hart');
-
-        const cloneVideoHart = videoHart.cloneNode(true);
-
-        const workFullArticleHart = cloneVideoHart.querySelector('.work_full_article__hart');
-
-        fancyboxContent.append(cloneVideoHart);
-
-        workFullArticleHart.addEventListener('click', () => {
-          workFullArticleHart.classList.toggle('active');
-          workFullArticleHartHtml.classList.toggle('active');
-          console.log('Отправка запроса');
-        });
-      },
-    },
-  });
-} */
-
 if (videoFancyboxBx) {
   videoFancyboxBx.addEventListener('click', ({ target }) => {
     const parent = target.closest('.video_fancybox_parent_js');
 
     if (parent) {
-      // console.log(parent);
       const videoHart = parent.querySelector('.video_hart');
       const workFullArticleHartHtml = videoHart.querySelector('.work_full_article__hart');
 
@@ -819,8 +703,6 @@ if (worksTabs) {
 const filterJs = document.querySelector('.filter_js');
 
 if (filterJs) {
-  // const works = filterJs.querySelector('.works');
-  // mixitup(works);
   mixitup(filterJs);
 }
 
@@ -846,7 +728,7 @@ if (worksModalJs) {
   });
 }
 
-// Сердечко на странице "Портфолио" в полном описании работы в модальном окне
+// Нравится на странице "Портфолио" в полном описании работы в модальном окне
 const workFullArticle = document.querySelector('.work_full_article');
 
 if (workFullArticle) {
@@ -854,6 +736,7 @@ if (workFullArticle) {
 
   workFullArticleHart.addEventListener('click', () => {
     workFullArticleHart.classList.toggle('active');
+    console.log('Отправка');
   });
 }
 

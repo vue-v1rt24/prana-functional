@@ -1512,11 +1512,6 @@ a {
   filter: grayscale(1);
 }
 
-/* Цвет балуна */
-.ymaps-2-1-79-svg-icon {
-  /* filter: hue-rotate(200deg); */
-}
-
 /*  */
 .data_company__address {
   position: absolute;
