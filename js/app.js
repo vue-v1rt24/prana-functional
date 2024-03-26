@@ -348,13 +348,14 @@ if (btnDie) {
 }
 
 /* ================= Блок "Рассчитаем стоимость" */
+let dataForm = null;
+
 const calculationForm = document.querySelector('.calculation__form');
 if (calculationForm) {
   const blueBtnTitle = calculationForm.querySelector('.blue_btn__title');
   const calculationVariantsWrap = calculationForm.querySelectorAll('.calculation__variants_wrap');
   let isSelect = false;
   let isCalcSelect = false;
-  let dataForm = null;
 
   //
   const isSelectFoo = () => {
@@ -493,8 +494,6 @@ const validateForm = (form) => {
           data.append(key, value);
         });
       }
-
-      await new Promise((res) => setTimeout(() => res(''), 3000));
 
       // Сброс данных формы
       calculationForm.reset();
